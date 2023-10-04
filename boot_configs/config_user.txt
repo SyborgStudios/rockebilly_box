@@ -1,0 +1,16 @@
+# User specific config.txt options
+
+hdmi_force_hotplug=1
+max_usb_current=1
+
+hdmi_group=2
+hdmi_mode=87
+hdmi_cvt 1024 600 50 6 0 0 0
+hdmi_drive=1
+
+dtoverlay=gpio-key,gpio=3,keycode=116,label="POWER"
+dtoverlay=gpio-key,gpio=21,keycode=0x3C,label="BACK"
+
+gpio=15=op,dh
+
+dtoverlay=rpi-backlight
