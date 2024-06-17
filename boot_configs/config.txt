@@ -27,12 +27,7 @@ start_x=1
 # Display
 disable_overscan=1
 
-# Display panel
-[gpio21=1]
-#dtoverlay=cutiepi-panel
-#dtoverlay=vc4-kms-dsi-7inch
-#dtoverlay=vc4-kms-dsi-lt070me05000
-#dtoverlay=vc4-kms-dsi-lt070me05000-v2
+
 [all]
 #dtoverlay=rpi-backlight
 
@@ -43,7 +38,6 @@ disable_overscan=1
 #dtoverlay=rpi-poe-plus
 
 # Graphics acceleration
-[gpio21=1]
 dtoverlay=vc4-kms-v3d
 dtoverlay=cma,cma-512
 [all]
@@ -76,7 +70,7 @@ arm_freq=1800
 enable_uart=1
 
 # SPI
-dtparam=spi=on
+dtparam=spi=off
 
 # Touchscreen
 dtoverlay=ads7846,cs=1,penirq=25,penirq_pull=2,speed=50000,keep_vref_on=0,swapxy=0,pmax=255,xohms=150,xmin=200,xmax=3900,ymin=200,ymax=3900

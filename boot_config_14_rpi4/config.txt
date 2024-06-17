@@ -1,0 +1,63 @@
+# Kernel
+arm_64bit=1
+kernel=Image
+
+# Ramdisk
+initramfs ramdisk.img followkernel
+
+# Audio
+dtparam=audio=on
+
+# Camera
+#camera_auto_detect=1
+#start_x=1
+
+# CPU
+#arm_boost=1
+
+# Display
+disable_overscan=1
+
+# Display panel
+#dtoverlay=vc4-kms-dsi-7inch
+#dtoverlay=rpi-backlight
+
+# Graphics acceleration
+disable_fw_kms_setup=1
+dtoverlay=vc4-kms-v3d
+
+# I2C
+#dtparam=i2c_arm=on
+
+# I2S
+#dtparam=i2s=on
+
+# Serial console
+#enable_uart=1
+
+# SPI
+#dtparam=spi=on
+
+# USB
+dtoverlay=dwc2,dr_mode=peripheral
+[cm4]
+dtoverlay=dwc2,dr_mode=otg
+[all]
+dtoverlay=dwc2,dr_mode=peripheral
+
+usb_max_current_enable=1
+max_usb_current=1
+
+hdmi_group=2
+hdmi_mode=87
+hdmi_cvt 1024 600 50 6 0 0 0
+hdmi_drive=1
+
+dtoverlay=gpio-key,gpio=26,keycode=115,label="VOLUME_UP"
+dtoverlay=gpio-key,gpio=20,keycode=114,label="VOLUME_DOWN"
+dtoverlay=gpio-key,gpio=3,keycode=116,label="POWER"
+dtoverlay=gpio-key,gpio=21,keycode=158,label="BACK"
+
+# Overclock
+over_voltage=3
+arm_freq=1800

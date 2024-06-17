@@ -11,6 +11,3 @@ hdmi_drive=1
 dtoverlay=gpio-key,gpio=3,keycode=116,label="POWER"
 dtoverlay=gpio-key,gpio=21,keycode=0x3C,label="BACK"
 
-gpio=15=op,dh
-
-dtoverlay=rpi-backlight
